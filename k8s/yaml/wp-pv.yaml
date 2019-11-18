@@ -6,6 +6,8 @@ spec:
   capacity:
     storage: 1Gi
   volumeMode: Filesystem
-  accessModes:    - ReadWriteMany
-  nfs:    path: /html
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /html
     server: nfs01
