@@ -29,4 +29,4 @@ spec:  replicas: 2
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
-#          name: wp-pv-claim
+          claimName: wp-pv-claim
