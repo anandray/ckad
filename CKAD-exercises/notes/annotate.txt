@@ -1,0 +1,4 @@
+# kubectl annotate pod nginx{1..3} description='my description'
+# kubectl describe pod nginx1 | grep -i -ab4 annot
+# kubectl describe pod nginx{1..3} | grep -i -ab4 annot
+# kubectl annotate pod nginx{1..3} description-

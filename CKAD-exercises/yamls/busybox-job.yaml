@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: busybox-job
+spec:
+  parallelism: 5
+#  completions: 5
+#  activeDeadlineSeconds: 30
+#  ttlSecondsAfterFinished: 10
+  template:
+    metadata:
+    spec:
+      containers:
+      - args:
+        - /bin/sh
+        - -c
+        - echo hello - `date`;sleep 2;echo hello - `date`
+        image: busybox
+        name: busybox-job
+        resources: {}
+      restartPolicy: OnFailure
+status: {}
